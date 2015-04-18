@@ -7,6 +7,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin, admindocs
 admin.autodiscover()
 
+
 '''
 from django.conf.urls import include, url
 
@@ -30,9 +31,16 @@ urlpatterns = [
 '''
 
 
-
 urlpatterns = patterns('',
     (r'^articles/', include('article.urls')),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
+
+    # user auth urls
+    (r'^accounts/login/$', 'django_test.views.login'),
+    (r'^accounts/auth/$', 'django_test.views.auth_view'),
+    (r'^accounts/logout/$', 'django_test.views.logout'),
+    (r'^accounts/loggedin/$', 'django_test.views.loggedin'),
+    (r'^accounts/invalid/$', 'django_test.views.invalid'),
+
 )

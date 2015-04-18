@@ -78,11 +78,3 @@ def language(request, language='en-us'):
     request.session['lang'] = language
 
     return response
-
-
-
-
-
-
-
-
