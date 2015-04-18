@@ -1,6 +1,18 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+<ul>
+    <li><a href="/articles/all">Back</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+
 <html>
 <body>
 <h1>{{ article.title }}</h1>
 <p>{{ article.body }}</p>
 </body>
 </html>
+
+{% endblock %}
