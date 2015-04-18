@@ -41,6 +41,11 @@ urlpatterns = patterns('',
     (r'^accounts/auth/$', 'django_test.views.auth_view'),
     (r'^accounts/logout/$', 'django_test.views.logout'),
     (r'^accounts/loggedin/$', 'django_test.views.loggedin'),
-    (r'^accounts/invalid/$', 'django_test.views.invalid'),
+    (r'^accounts/invalid_login/$', 'django_test.views.invalid_login'),
+
+    # registration urls
+    (r'^accounts/register/$', 'django_test.views.register_user'),
+    (r'^accounts/register_success/$', 'django_test.views.register_success'),
+
 
 )
