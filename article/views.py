@@ -43,6 +43,9 @@ class HelloTemplate(TemplateView):
 from django.shortcuts import render_to_response
 from article.models import Article
 from django.http import HttpResponse
+from forms import ArticleForm
+from django.http import HttpResponseRedirect
+from django.core.context_processors import csrf
 
 
 def articles(request):
@@ -78,3 +81,23 @@ def language(request, language='en-us'):
     request.session['lang'] = language
 
     return response
+
+
+def create(request):
+
+    if request.POST:
+        # if returning to itself, verses the first time arriving
+        form = ArticleForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/articles/all')
+    else:
+        # create a blank form for the user to submit
+        form = ArticleForm()
+
+    args = {}
+    args.update(csrf(request))
+
+    args['form'] = form
+
+    return render_to_response('create_article.html', args)

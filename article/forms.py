@@ -7,3 +7,5 @@ class ArticleForm(forms.ModelForm):
     # used to define anything that isn't a form field
     class Meta:
         model = Article
+        # needed in django 1.8 and up (not from the tutorial, but necessary to make it work in new django)
+        fields = '__all__'
