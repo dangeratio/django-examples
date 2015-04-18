@@ -1,3 +1,7 @@
 # ignores for standard django assets
 
 /django_test/assets/admin
+
+# ignore database file
+
+*.db

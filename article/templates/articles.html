@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -10,10 +11,13 @@
                 <p>{{ article.body|truncatewords:"10" }}</p>
             </div>
         {% endfor %}
+            <img src="{% static 'assets/images/python-logo.png' %}" />
 
     {% else %}
 
         <p>No articles to show!</p>
+        <img src="{% static 'assets/images/python-logo.png' %}" />
+
 
     {% endif %}
 
