@@ -6,7 +6,17 @@
 <ul>
     <li><a href="/articles/create/">Create Articles</a></li>
     <li><a href="/admin/">Admin</a></li>
+    <li>
+        <h3>Search</h3>
+        {% csrf_token %}
+        <input type="text" id="search" name="search" />
+
+        <ul id="search-results">
+
+        </ul>
+    </li>
 </ul>
+
 {% endblock %}
 
 {% block content %}

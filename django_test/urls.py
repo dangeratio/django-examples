@@ -51,7 +51,6 @@ urlpatterns = patterns('',
     (r'^accounts/register/$', 'django_test.views.register_user'),
     (r'^accounts/register_success/$', 'django_test.views.register_success'),
 
-
 )
 
 # fix for (in debug mode) serving of uploaded media files
