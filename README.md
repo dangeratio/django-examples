@@ -9,3 +9,9 @@ To use you will need to:
         Start a django project
         python manage.py syncdb
         python manage.py collectsources
+
+I was not able to get tutorial 16 to work, but if you do, you will also need to install:
+
+        pip install django-tastypie
+        pip install defusedxml "lxml>=3"
+
