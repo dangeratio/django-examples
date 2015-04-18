@@ -5,3 +5,7 @@
 # ignore database file
 
 storage.db
+
+# ignore IDE files
+
+/.idea
