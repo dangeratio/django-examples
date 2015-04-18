@@ -1,7 +1,9 @@
 # default imports
 
 from django.conf.urls import patterns, include, url
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
+from django.conf import settings
+from django.conf.urls.static import static
 
 # add admin
 
@@ -51,3 +53,8 @@ urlpatterns = patterns('',
 
 
 )
+
+# fix for (in debug mode) serving of uploaded media files
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

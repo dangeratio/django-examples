@@ -91,7 +91,7 @@ def create(request):
 
     if request.POST:
         # if returning to itself, verses the first time arriving
-        form = ArticleForm(request.POST)
+        form = ArticleForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/articles/all')

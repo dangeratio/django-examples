@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% load static %}
+
+{% load staticfiles %}
 
 {% block sidebar %}
 <ul>
@@ -22,12 +23,12 @@
                 <p>{{ article.likes }} Likes</p>
             </div>
         {% endfor %}
-            <img src="{% static 'assets/images/python-logo.png' %}" />
+            <img src="{% static 'images/python-logo.png' %}" />
 
     {% else %}
 
         <p>No articles to show!</p>
-        <img src="{% static 'assets/images/python-logo.png' %}" />
+        <img src="{% static 'images/python-logo.png' %}" />
 
 
     {% endif %}

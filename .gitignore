@@ -1,6 +1,9 @@
-# ignores for standard django assets
+# static files ignores
 
 /django_test/assets/admin
+/static/static_root/admin
+/static/media/uploads
+/article/migrations
 
 # ignore database file
 
