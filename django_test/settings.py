@@ -105,4 +105,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+# move files from here
 STATIC_URL = '/static/'
+
+# move files to here
+STATIC_ROOT = os.path.join(BASE_DIR, 'django_test/assets/')
+
+# file sources
+STATICFILES_DIRS = (
+    ('assets', os.path.join(BASE_DIR, 'django_test/static/')),
+)
