@@ -9,3 +9,7 @@ storage.db
 # ignore IDE files
 
 /.idea
+
+# random personal notes
+
+notes.txt
