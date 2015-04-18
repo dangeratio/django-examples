@@ -5,6 +5,7 @@ This project contains my in-work code for the youtube python-django set of tutor
 https://www.youtube.com/watch?v=oT1A1KKf0SI&list=PLNTiG-RQbbG4RmIqUMq_j4vinv4OGABHJ
 
 To use you will need to:
-    Start a django project
-    python manage.py syncdb
-    python manage.py collectsources
+
+        Start a django project
+        python manage.py syncdb
+        python manage.py collectsources
