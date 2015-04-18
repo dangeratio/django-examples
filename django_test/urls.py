@@ -1,6 +1,7 @@
 # default imports
 
 from django.conf.urls import patterns, include, url
+from django.http import HttpResponseRedirect
 
 # add admin
 
@@ -32,6 +33,7 @@ urlpatterns = [
 
 
 urlpatterns = patterns('',
+    (r'^$', lambda r: HttpResponseRedirect('/articles/all')),
     (r'^articles/', include('article.urls')),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),

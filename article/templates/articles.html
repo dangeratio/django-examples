@@ -19,6 +19,7 @@
             <div>
                 <h2><a href='/articles/get/{{ article.id }}'>{{ article.title }}</a></h2>
                 <p>{{ article.body|truncatewords:"10" }}</p>
+                <p>{{ article.likes }} Likes</p>
             </div>
         {% endfor %}
             <img src="{% static 'assets/images/python-logo.png' %}" />
