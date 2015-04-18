@@ -9,3 +9,5 @@ class ArticleForm(forms.ModelForm):
         model = Article
         # needed in django 1.8 and up (not from the tutorial, but necessary to make it work in new django)
         fields = '__all__'
+        # alternately you can specify fields
+        fields = ('title', 'body', 'pub_date')
