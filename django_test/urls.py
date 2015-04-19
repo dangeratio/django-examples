@@ -9,7 +9,8 @@ from django.conf.urls.static import static
 
 from django.contrib import admin, admindocs
 admin.autodiscover()
-
+from django_test.forms import ContactForm1, ContactForm2, ContactForm3
+from django_test.views import ContactWizard
 
 '''
 from django.conf.urls import include, url

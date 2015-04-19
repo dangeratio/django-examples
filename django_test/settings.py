@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'article',
     # 'tastypie',
+    'django.contrib.formtools',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -15,3 +15,4 @@ I was not able to get tutorial 16 to work, but if you do, you will also need to 
         pip install django-tastypie
         pip install defusedxml "lxml>=3"
 
+Currently in the middle of tutorial 19
