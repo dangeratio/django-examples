@@ -47,6 +47,10 @@ from forms import ArticleForm
 from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 def root(request):
     return HttpResponseRedirect('/articles/all')
@@ -123,11 +127,14 @@ def like_article(request, article_id):
 
 
 def search_titles(request):
+
     if request.method == "POST":
         search_text = request.POST['search_text']
+        if search_text is not None and search_text != u"":
+            articles = Article.objects.filter(title__contains=search_text)
+        else:
+            articles = None
     else:
-        search_text = ''
+        articles = None
 
-    articles = Article.objects.filter(title__contains=search_text)
-
-    return render_to_response('ajax_search.html', {'articles' : articles})
+    return render_to_response('ajax_search.html', {'articles': articles})
